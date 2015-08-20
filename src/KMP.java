@@ -75,7 +75,7 @@ public class KMP {
 						j = 1;
 					}
 				}else{
-					i = i + next[j];
+					i = i - next[j];
 					j = 1;
 				}
 			}
@@ -86,10 +86,10 @@ public class KMP {
 	}
 			
 	public static void main(String[] args) {
-//		String model = "abcabcacab";
-//		String target = "babcbabcabcaabcabcabcacabc";
-		String model = "abc";
-		String target = "abcab";
+		String model = "abcabcacab";
+		String target = "babcbabcabcaabcabcabcacabc";
+//		String model = "abc";
+//		String target = "ababc";
 		KMP kmp = new KMP(target, model);
 		kmp.next();
 		kmp.query();
